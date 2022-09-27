@@ -17,6 +17,8 @@
 		CE0329A928E1707B00C5F1E7 /* EventListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0329A828E1707B00C5F1E7 /* EventListCoordinator.swift */; };
 		CE0329AB28E1715700C5F1E7 /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0329AA28E1715700C5F1E7 /* EventListViewController.swift */; };
 		CE6AA33728E17CC400B05796 /* EventsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE6AA33528E17CC400B05796 /* EventsApp.xcdatamodeld */; };
+		CE6CBFF628E31474005C8311 /* ImagePickerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CBFF528E31474005C8311 /* ImagePickerCoordinator.swift */; };
+		CE6CBFF828E314BD005C8311 /* EventsCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CBFF728E314BD005C8311 /* EventsCellBuilder.swift */; };
 		CEAF907A28E17E0D00B0480E /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAF907928E17E0D00B0480E /* CoreDataManager.swift */; };
 		CEAF907C28E195C100B0480E /* EventListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAF907B28E195C100B0480E /* EventListViewModel.swift */; };
 		CEAF907E28E19A7400B0480E /* AddEventCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAF907D28E19A7400B0480E /* AddEventCoordinator.swift */; };
@@ -40,6 +42,8 @@
 		CE0329A828E1707B00C5F1E7 /* EventListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListCoordinator.swift; sourceTree = "<group>"; };
 		CE0329AA28E1715700C5F1E7 /* EventListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewController.swift; sourceTree = "<group>"; };
 		CE6AA33628E17CC400B05796 /* EventsApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EventsApp.xcdatamodel; sourceTree = "<group>"; };
+		CE6CBFF528E31474005C8311 /* ImagePickerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerCoordinator.swift; sourceTree = "<group>"; };
+		CE6CBFF728E314BD005C8311 /* EventsCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsCellBuilder.swift; sourceTree = "<group>"; };
 		CEAF907928E17E0D00B0480E /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		CEAF907B28E195C100B0480E /* EventListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewModel.swift; sourceTree = "<group>"; };
 		CEAF907D28E19A7400B0480E /* AddEventCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventCoordinator.swift; sourceTree = "<group>"; };
@@ -90,6 +94,7 @@
 				CEAF908928E1B4B500B0480E /* Resources */,
 				CE03299628E16BFA00C5F1E7 /* ViewController.swift */,
 				CE03299828E16BFA00C5F1E7 /* Main.storyboard */,
+				CE6CBFF728E314BD005C8311 /* EventsCellBuilder.swift */,
 			);
 			path = EventApp;
 			sourceTree = "<group>";
@@ -100,6 +105,7 @@
 				CE0329A628E16DCB00C5F1E7 /* AppCoordinator.swift */,
 				CE0329A828E1707B00C5F1E7 /* EventListCoordinator.swift */,
 				CEAF907D28E19A7400B0480E /* AddEventCoordinator.swift */,
+				CE6CBFF528E31474005C8311 /* ImagePickerCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -249,7 +255,9 @@
 				CEAF907E28E19A7400B0480E /* AddEventCoordinator.swift in Sources */,
 				CE0329A928E1707B00C5F1E7 /* EventListCoordinator.swift in Sources */,
 				CEAF908028E1B15A00B0480E /* AddEventViewController.swift in Sources */,
+				CE6CBFF828E314BD005C8311 /* EventsCellBuilder.swift in Sources */,
 				CEAF907C28E195C100B0480E /* EventListViewModel.swift in Sources */,
+				CE6CBFF628E31474005C8311 /* ImagePickerCoordinator.swift in Sources */,
 				CECF816828E1D7FD00AD5BE4 /* TitleSubtitleCell.swift in Sources */,
 				CEAF907A28E17E0D00B0480E /* CoreDataManager.swift in Sources */,
 				CE6AA33728E17CC400B05796 /* EventsApp.xcdatamodeld in Sources */,
