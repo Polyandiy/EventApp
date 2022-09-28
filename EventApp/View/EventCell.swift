@@ -10,8 +10,7 @@ import UIKit
 
 final class EventCell: UITableViewCell {
     
-    private let timeRemainigLabels = [UILabel(), UILabel(), UILabel(), UILabel()]
-    
+    private let timeRemainingStackView =  TimeRemainingStackView()
     private let dateLabel = UILabel()
     private let eventNameLabel = UILabel()
     private let backgroundImageView = UIImageView()
@@ -30,35 +29,31 @@ final class EventCell: UITableViewCell {
     }
     
     private func setupViews() {
-        (timeRemainigLabels + [eventNameLabel, backgroundImageView, verticalStackView]).forEach {
+        timeRemainingStackView.setup()
+        
+        [dateLabel, eventNameLabel, backgroundImageView, verticalStackView].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
         }
-        timeRemainigLabels.forEach {
-            $0.font = .systemFont(ofSize: 28, weight: .medium)
-            $0.textColor = .white
-        }
+        
         dateLabel.font = .systemFont(ofSize: 22, weight: .medium)
         dateLabel.textColor = .white
         eventNameLabel.font = .systemFont(ofSize: 34, weight: .bold)
         eventNameLabel.textColor = .white
         verticalStackView.axis = .vertical
         verticalStackView.alignment = .trailing
-//        backgroundImageView.contentMode = .scaleToFill
     }
     
     private func setupHierarchy() {
         contentView.addSubview(backgroundImageView)
         contentView.addSubview(verticalStackView)
         contentView.addSubview(eventNameLabel)
-        timeRemainigLabels.forEach {
-            verticalStackView.addArrangedSubview($0)
-        }
+        verticalStackView.addArrangedSubview(timeRemainingStackView)
         verticalStackView.addArrangedSubview(UIView())
         verticalStackView.addArrangedSubview(dateLabel)
     }
     
     private func setupLayout() {
-        backgroundImageView.pinToSuperviewEdges([.left,.right,.top])
+        backgroundImageView.pinToSuperviewEdges([.left, .right, .top])
         let bottomConstraint = backgroundImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         bottomConstraint.priority = .required  - 1
         bottomConstraint.isActive = true
@@ -69,8 +64,8 @@ final class EventCell: UITableViewCell {
     }
     
     func update(with viewModel: EventCellViewModel) {
-        viewModel.timeReainingString.enumerated().forEach {
-            timeRemainigLabels[$0.offset].text = $0.element
+        if let timeRemainingViewModel = viewModel.timeRemainingViewModel {
+            timeRemainingStackView.update(with: timeRemainingViewModel)
         }
         dateLabel.text = viewModel.dateText
         eventNameLabel.text = viewModel.eventName
