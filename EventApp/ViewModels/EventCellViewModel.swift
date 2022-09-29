@@ -24,11 +24,6 @@ struct EventCellViewModel {
     init(_ event: Event) {
         self.event = event
     }
-
-//    var timeRemainingString: [String] {
-//        guard let eventDate = event.date else { return [] }
-//        return date.timeRemaining(until: eventDate)?.components(separatedBy: ",") ?? []
-//    }
     
     var dateText: String? {
         guard let eventDate = event.date else { return nil }
